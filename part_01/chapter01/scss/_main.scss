@@ -1,0 +1,86 @@
+header{
+  @include flexCenter(space-between,center);
+  padding: 0 20px;
+  box-sizing: border-box;
+  h1 {
+    width: 225px;
+    .logo {
+      width:100%;
+      object-fit: cover;
+    }
+  }
+  .quick_link{
+    @include customSize(340px,48px);
+    @include flexCenter(center, center);
+    border-radius:40px;
+    padding: 0 8px;
+    border: 1px solid $border;
+    box-shadow: 0px 0px 10px #ddd;
+    ul{
+      @include flexCenter(none, center);
+      li{
+        position: relative;
+        &::after{
+          content:'';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: $border;
+          @include customSize(1px, 24px);
+       
+        }
+        &:last-child::after{display: none;}
+      }
+    }
+  }
+  .user_area{
+    @include flexCenter(space-between, center);
+    .txt_desc{
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+}
+.ico{
+  &__bx{
+    @include flexCenter(center,center);
+    @include customSize(32px,32px);
+    background-color: $pointC;
+    border-radius: 50%;
+    line-height: 64px;
+  }
+  &__search{
+    @include customSize(15px,15px);
+    background: url(../img/Magnifying_glass_icon.svg) no-repeat;
+    background-size: 100%;
+  }
+  &__menu{
+
+  }
+  &__user{
+
+  }
+  &__earth{
+    display: inline-block;
+    vertical-align: top;
+    @include customSize(15px, 15px);
+    background: url(../img/earch.svg) no-repeat;
+    background-size: 100%;
+  }
+}
+
+.btn{
+  &__search{
+    display: inline-block;
+    vertical-align:top;
+    padding: 0 16px;
+    box-sizing: border-box;height: 100%;
+    line-height: 64px;
+
+  }
+  &__lang{
+
+  }
+
+}

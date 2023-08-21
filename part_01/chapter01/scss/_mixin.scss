@@ -46,3 +46,16 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@mixin customSize($w, $h){
+  width: $w;
+  height: $h
+}
+@mixin flexCenter($justify,$align){
+  display:flex;
+  @if($justify){
+    justify-content:$justify;
+  }
+  @if($align){
+    align-items:$align;
+  }
+}
