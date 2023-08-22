@@ -1,7 +1,8 @@
 header{
   @include flexCenter(space-between,center);
-  padding: 0 20px;
+  padding: 0 80px;
   box-sizing: border-box;
+  color:#222;
   h1 {
     width: 225px;
     .logo {
@@ -10,16 +11,17 @@ header{
     }
   }
   .quick_link{
-    @include customSize(340px,48px);
+    @include customSize(auto,48px);
     @include flexCenter(center, center);
     border-radius:40px;
     padding: 0 8px;
     border: 1px solid $border;
-    box-shadow: 0px 0px 10px #ddd;
+    box-shadow: 2px 2px 5px #d1d0d0;
+    box-sizing:border-box;
     ul{
       @include flexCenter(none, center);
       li{
-        position: relative;
+        position:relative;
         &::after{
           content:'';
           position: absolute;
@@ -28,17 +30,24 @@ header{
           transform: translateY(-50%);
           background-color: $border;
           @include customSize(1px, 24px);
-       
         }
-        &:last-child::after{display: none;}
+        &:last-child{
+          &::after{display:none;}
+        }
       }
+    }
+    &:hover{
+      box-shadow: 3px 3px 7px #d1d0d0;
     }
   }
   .user_area{
     @include flexCenter(space-between, center);
     .txt_desc{
-      font-size: 13px;
       font-weight: bold;
+      font-size: 14px;
+      padding:12px;
+      border-radius:20px;
+      &:hover{background-color:$bgC01;}
     }
   }
 }
@@ -48,11 +57,10 @@ header{
     @include customSize(32px,32px);
     background-color: $pointC;
     border-radius: 50%;
-    line-height: 64px;
   }
   &__search{
-    @include customSize(15px,15px);
-    background: url(../img/Magnifying_glass_icon.svg) no-repeat;
+    @include customSize(12px,12px);
+    background: url(../img/search.svg) no-repeat;
     background-size: 100%;
   }
   &__menu{
@@ -75,9 +83,15 @@ header{
     display: inline-block;
     vertical-align:top;
     padding: 0 16px;
-    box-sizing: border-box;height: 100%;
-    line-height: 64px;
-
+    box-sizing: border-box;
+    height: 100%;
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+    &.btn__s03{
+      font-weight: normal;
+      color:#717171;
+    }
   }
   &__lang{
 
