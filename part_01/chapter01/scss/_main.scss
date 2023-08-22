@@ -1,33 +1,40 @@
 header{
-  @include flexCenter(space-between,center);
+  @include customSize(100%,auto);
+  @include position(relative);
+}
+.nav{
+  @include position(relative);
+  @include customSize(100%,80px);
+  @include flexPos(space-between,center);
   padding: 0 80px;
   box-sizing: border-box;
   color:#222;
+  font-size:14px;
+  border-bottom: 1px solid $border;
   h1 {
-    width: 225px;
+    width:102px;
     .logo {
       width:100%;
-      object-fit: cover;
     }
   }
   .quick_link{
+    @include position(absolute,50%,50%);
+    @include translate(-50%,-50%);
     @include customSize(auto,48px);
-    @include flexCenter(center, center);
+    @include flexPos(center, center);
     border-radius:40px;
     padding: 0 8px;
     border: 1px solid $border;
     box-shadow: 2px 2px 5px #d1d0d0;
     box-sizing:border-box;
     ul{
-      @include flexCenter(none, center);
+      @include flexPos(none, center);
       li{
-        position:relative;
+        @include position(relative);
         &::after{
           content:'';
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
+          @include position(absolute,auto,50%,0,auto);
+          @include translate(0,-50%);
           background-color: $border;
           @include customSize(1px, 24px);
         }
@@ -41,52 +48,153 @@ header{
     }
   }
   .user_area{
-    @include flexCenter(space-between, center);
+    @include flexPos(space-between, center);
     .txt_desc{
       font-weight: bold;
-      font-size: 14px;
       padding:12px;
       border-radius:20px;
       &:hover{background-color:$bgC01;}
     }
+    .my_info{
+      @include flexPos(center,center);
+      margin-left: 12px;
+      .info_bx{
+        display: none;
+        @include position(absolute, auto,69px,80px,auto);
+        box-shadow: 0 0 7px #d1d0d0;
+        border-radius:10px;
+        overflow: hidden;
+        background-color: $bgC02;
+        &.is_act{
+          display:block;
+        }
+      }
+      .info_list{
+        @include position(relative);
+        padding: 8px 0;
+        &:nth-of-type(1){
+          border-bottom: 1px solid $border;
+        }
+        li{
+          padding:12px 16px;
+          &:hover{
+            background-color: $bgC01;
+          }
+        }
+        &::after{
+          content:'';
+          display: inline-block;
+          @include customSize(80%,1px);
+          @include position(absolute, 0, 50%);
+          @include translate(none, -50%);
+          background-color: $bgC02;
+        }
+      }
+    }
+  }
+}
+.lnb{
+  @include customSize(100%,98px);
+  @include flexPos(none, center);
+  @include position(relative);
+  box-sizing: border-box;
+  padding: 0 80px;
+
+}
+.swiper{
+  &__filter{
+
+  }
+  &-wrapper{
+
+  }
+  &-slide{
+    cursor: pointer;
+    width:auto;
   }
 }
 .ico{
   &__bx{
-    @include flexCenter(center,center);
+    @include flexPos(center,center);
     @include customSize(32px,32px);
     background-color: $pointC;
     border-radius: 50%;
+    cursor: pointer;
   }
   &__search{
     @include customSize(12px,12px);
-    background: url(../img/search.svg) no-repeat;
-    background-size: 100%;
+    background: url(../img/search.svg);
+  }
+  &__myinfo{
+    @include flexPos(center,center);
+    box-sizing: border-box;
+    padding: 5px 5px 5px 12px;
+    border-radius:20px;
+    border: 1px solid $border;
+    &:hover{
+      box-shadow: 2px 2px 5px #d1d0d0;
+    }
   }
   &__menu{
-
+    @include customSize(16px, 16px);
+    background: url(../img/menu.svg);
   }
   &__user{
-
+    @include customSize(29px, 29px);
+    background: url(../img/user.svg);
+    margin-left: 12px;
   }
   &__earth{
-    display: inline-block;
-    vertical-align: top;
-    @include customSize(15px, 15px);
-    background: url(../img/earch.svg) no-repeat;
-    background-size: 100%;
+    @include customSize(16px, 16px);
+    background: url(../img/earth.svg);
   }
+  &__filter_menu{
+    margin-bottom: 10px;
+    text-align: center;
+    img{
+      display: inline-block;
+      @include customSize(24px,24px);
+    }
+    
+  }
+  &__prev{
+    @include flexPos(center, center);
+    @include customSize(28px,28px);
+    border: 1px solid $border;
+    border-radius: 50%;
+    &::after{
+      content:'';
+      @include customSize(12px,12px);
+      background:url(../img/btn_prev.svg);
+    }
+  }
+  &__next{
+    @include flexPos(center, center);
+    @include customSize(28px,28px);
+    border: 1px solid $border;
+    border-radius: 50%;
+    &::after{
+      content:'';
+      @include customSize(12px,12px);
+      background:url(../img/btn_next.svg);
+    }
+
+  }
+  display: inline-block;
+  vertical-align: top;
+  background-repeat:no-repeat;
+  background-size: 100%;
 }
 
 .btn{
+  font-size:14px;
+  display: inline-block;
+  vertical-align:top;
   &__search{
-    display: inline-block;
-    vertical-align:top;
     padding: 0 16px;
     box-sizing: border-box;
     height: 100%;
     color: #222;
-    font-size: 14px;
     font-weight: bold;
     &.btn__s03{
       font-weight: normal;
@@ -94,7 +202,54 @@ header{
     }
   }
   &__lang{
+    @include customSize(46px,42px);
+    border-radius:50%;
+    &:hover{
+      background-color:$bgC01;
+    }
+  }
+  &__pop_signup{
+    font-weight: bold;
+  }
+  &__slide_nav{
+    @include customSize(80px, 98px);
+    background-color: #fff;
+    z-index: 10;
 
   }
+  &__prev{
+    @include flexPos(end, center);
+    @include position(absolute, 28px, 0);
+    box-shadow: 30px 0 25px #fff;
+  }
+  &__next{
+    @include flexPos(start, center);
+    @include position(absolute, auto, 0, 28px);
+    box-shadow: -30px 0 25px #fff;
+  }
 
+  &__txt{
+    .txt_desc{
+      display: inline-block;
+      height: 20px;
+      position: relative;
+      font-size: 12px;
+      color: #717171;
+      &::after{
+        content:'';
+        display: inline-block;
+        @include position(absolute,0,auto,auto,0px);
+        @include customSize(0,3px);
+        background-color: $border;
+      }
+      &:hover::after{
+        @include customSize(100%, 3px);
+        transition: 0.3s;
+      }
+    }
+    &.is_act .txt_desc::after {
+      background-color: #222;
+      @include customSize(100%, 3px);
+    }
+  }
 }

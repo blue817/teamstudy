@@ -4,33 +4,347 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AirBnB</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/airbnb.css">
 </head>
 <body>
   <header>
-    <h1><img src="./img/comp_0685990 (1).png" alt="fast campus logo" class="logo"></h1>
-    <div class="quick_link">
-      <ul>
-        <li><button type="button" class="btn__search btn__s01">어디든지</button></li>
-        <li><button type="button" class="btn__search btn__s02">언제든 일주일</button></li>
-        <li><button type="button" class="btn__search btn__s03">게스트 추가</button></li>
-      </ul>
-      <span class="ico__bx"><span class="ico__search"></span></span>
-    </div>
-    <div class="user_area">
-      <span class="txt_desc">당신의 공간을 에어비앤비하세요</span>
-      <div class="lang_bx">
-        <button type="button" class="btn__lang"><span class="ico__earth"></span></button>
-        <ul class="lang_list">
-          <li class="list_items"><button type="button" class="btn__ko">한국어</button></li>
-          <li class="list_items"><button type="button" class="btn__en">English</button></li>
-          <li class="list_items"><button type="button" class="btn__jp">일본어</button></li>
+    <div class="nav">
+    <h1><img src="./img/logo.svg" alt="airbnb logo" class="logo"></h1>
+      <div class="quick_link">
+        <ul>
+          <li><button type="button" class="btn btn__search btn__s01">어디든지</button></li>
+          <li><button type="button" class="btn btn__search btn__s02">언제든 일주일</button></li>
+          <li><button type="button" class="btn btn__search btn__s03">게스트 추가</button></li>
         </ul>
+        <span class="ico__bx"><span class="ico ico ico__search"></span></span>
       </div>
-      <div class="my_info">
-        <a href="#"><span class="ico__menu"></span><span class="ico__user"></span></a>
+      <div class="user_area">
+        <span class="txt_desc">당신의 공간을 에어비앤비하세요</span>
+        <button type="button" class="btn btn__lang"><span class="ico ico__earth"></span></button>
+        <div class="my_info">
+          <button type="button" class="ico__myinfo"><span class="ico ico__menu"></span><span class="ico ico__user"></span></button>
+          <div class="info_bx">
+            <ul class="info_list">
+              <li class="list-items"><button type="button" class="btn btn btn__pop_signup">회원가입</button></li>
+              <li class="list-items"><button type="button" class="btn btn btn__pop_login">로그인</button></li>
+            </ul>
+            <ul class="info_list">
+              <li class="list-items"><a href="https://www.airbnb.co.kr/host/homes">당신의 공간을 에어비앤비하세요</a></li>
+              <li class="list-items"><a href="https://www.airbnb.co.kr/help">도움말 센터</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lnb">
+      <button type="button" class="btn__prev btn__slide_nav"><span class="blind">이전</span><span class="ico ico__prev"></span></button>
+      <button type="button" class="btn__next btn__slide_nav"><span class="blind">다음</span><span class="ico ico__next"></span></button>
+      <div class="swiper swiper__filter">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/room.png" alt="방" class="ico ico__room">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">방</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/swim.png" alt="멋진 수영장" class="ico ico__swim">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">멋진 수영장</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/sea.png" alt="해변 바로 앞" class="ico ico__sea">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">해변 바로 앞</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/a.png" alt="A자형 주택" class="ico ico__a">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">A자형 주택</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/bnb.png" alt="B&B" class="ico ico__bnb">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">B&B</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/view.png" alt="최고의 전망" class="ico ico__view">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">최고의 전망</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/peace.png" alt="한적한 시골" class="ico ico__peace">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">한적한 시골</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/kr.png" alt="한옥" class="ico ico__kr">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">한옥</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/hot.png" alt="인기 급상승" class="ico ico__hot">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">인기 급상승</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/park.png" alt="국립공원" class="ico ico__park">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">국립공원</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/camping.png" alt="캠핑장" class="ico ico__camping">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">캠핑장</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/special.png" alt="기상천외한 숙소" class="ico ico__special">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">기상천외한 숙소</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/farm.png" alt="농장" class="ico ico__farm">
+            </div>
+            <button type="button"><span class="txt_desc">농장</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/micro.png" alt="초소형 주택" class="ico ico__micro">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">초소형 주택</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/tree.png" alt="통나무집" class="ico ico__tree">
+            </div>
+            <button type="button"><span class="txt_desc">통나무집</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/lo.png" alt="료칸" class="ico ico__lo">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">료칸</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/design.png" alt="디자인" class="ico ico__design">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">디자인</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/new.png" alt="신규" class="ico ico__new">
+            </div>
+            <button type="button"><span class="txt_desc">신규</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/tropical.png" alt="열대지역" class="ico ico__tropical">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">열대지역</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/side.png" alt="속세를 벗어난 숙소" class="ico ico__side">
+            </div>
+            <button type="button"><span class="txt_desc">속세를 벗어난 숙소</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/lake.png" alt="호수 근처" class="ico ico__lake">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">호수 근처</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/lake2.png" alt="호숫가" class="ico ico__lake2">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">호숫가</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/kids.png" alt="키즈" class="ico ico__kids">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">키즈</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/cacel.png" alt="캐슬" class="ico ico__cacel">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">캐슬</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/wine.png" alt="와인 농장" class="ico ico__wine">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">와인 농장</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/luxe.png" alt="Luxe" class="ico ico__luxe">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">Luxe</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/house.png" alt="저택" class="ico ico__house">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">저택</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/simbol.png" alt="상징적 도시" class="ico ico__simbol">
+            </div>
+            <button type="button" class="btn__txt"><span class="txt_desc">상징적 도시</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/treehouse.png" alt="트리하우스" class="ico ico__treehouse">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">트리하우스</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/island.png" alt="섬" class="ico ico__island">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">섬</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/history.png" alt="유서 깊은 주택" class="ico ico__history">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">유서 깊은 주택</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/dis.png" alt="무장애" class="ico ico__dis">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">무장애</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/creative.png" alt="창작 공간" class="ico ico__creative">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">창작 공간</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/piano.png" alt="그랜드 피아노" class="ico ico__piano">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">그랜드 피아노</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/cook.png" alt="전문가급 주방" class="ico ico__cook">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">전문가급 주방</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/north.png" alt="북극" class="ico ico__north">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">북극</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/surfing.png" alt="서핑" class="ico ico__surfing">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">서핑</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/mountain.png" alt="세상의 꼭대기" class="ico ico__mountain">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">세상의 꼭대기</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/houseboat.png" alt="하우스보트" class="ico ico__houseboat">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">하우스보트</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/carv.png" alt="동굴" class="ico ico__carv">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">동굴</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/container.png" alt="컨테이너하우스" class="ico ico__container">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">컨테이너하우스</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/barn.png" alt="헛간" class="ico ico__barn">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">헛간</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/boat.png" alt="보트" class="ico ico__boat">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">보트</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/desert.png" alt="사막" class="ico ico__desert">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">사막</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/golf.png" alt="골프장" class="ico ico__golf">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">골프장</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/tower.png" alt="타워" class="ico ico__tower">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">타워</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/windmill.png" alt="풍차" class="ico ico__windmill">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">풍차</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/cart.png" alt="마차" class="ico ico__cart">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">마차</span></button>
+          </li>
+          <li class="swiper-slide">
+            <div class="ico__filter_menu">
+              <img src="./img/beach.png" alt="해변 근처" class="ico ico__beach">
+            </div>
+            <button type="button"class="btn__txt"><span class="txt_desc">해변 근처</span></button>
+          </li>
+        </ul> 
       </div>
     </div>
   </header>
+  <div id="container">
+    
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="./js/airbnb.js"></script>
 </body>
 </html>

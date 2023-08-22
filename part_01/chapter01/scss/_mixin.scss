@@ -1,61 +1,36 @@
-// 중앙정렬
-@mixin set-center-x($type: absolute) {
-  @if ($type ==fixed or $type ==absolute) {
-    position: $type;
-    left: 50%;
-    @include css3-prefix("transform", "translateX(-50%)");
-  }
-}
 
-@mixin set-center-y($type: absolute) {
-  @if ($type ==fixed or $type ==absolute) {
-    position: $type;
-    top: 50%;
-    @include css3-prefix("transform", "translateY(-50%)");
-  }
-}
-
-@mixin set-center($type: absolute) {
-  @if ($type ==fixed or $type ==absolute) {
-    position: $type;
-    top: 50%;
-    left: 50%;
-    @include css3-prefix("transform", "translate(-50%, -50%)");
-  }
-}
-
-// 말줄임 스타일
-@mixin ellipsis($line-num: 1, $display: null) {
-  @if $line-num >1 {
-    display: block; //ie
-    display: -webkit-box;
-    -webkit-line-clamp: $line-num;
-    -webkit-box-orient: vertical;
-    white-space: normal;
-    word-break: break-all;
-  }
-
-  @else {
-    @if $display !=null {
-      display: $display;
-    }
-
-    white-space: nowrap;
-  }
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-@mixin customSize($w, $h){
+@mixin customSize($w:auto, $h:auto){
   width: $w;
   height: $h
 }
-@mixin flexCenter($justify,$align){
+@mixin flexPos($justify:null,$align:null){
   display:flex;
   @if($justify){
     justify-content:$justify;
   }
   @if($align){
     align-items:$align;
+  }
+}
+@mixin position($type,$l:null,$t:null,$r:null,$b:null){
+  position:$type;
+  @if($l){
+    left:$l;
+  }
+  @if($t) {
+    top:$t;
+  }
+  @if($r){
+    right:$r;
+  }
+  @if($b){
+    bottom:$b;
+  }
+}
+@mixin translate($x:null,$y:null){
+  @if($x , $y){
+    transform: translate($x,$y);
+  }@else if($x){
+    transform: translateX($x);
   }
 }
