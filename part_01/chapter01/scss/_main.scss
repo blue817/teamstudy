@@ -59,6 +59,7 @@ header{
       @include flexPos(center,center);
       margin-left: 12px;
       .info_bx{
+        z-index: 100;
         display: none;
         @include position(absolute, auto,69px,80px,auto);
         box-shadow: 0 0 7px #d1d0d0;
@@ -111,6 +112,8 @@ header{
   &-slide{
     cursor: pointer;
     width:auto;
+    min-width:56px;
+    text-align: center;
   }
 }
 .ico{
@@ -160,6 +163,7 @@ header{
   &__prev{
     @include flexPos(center, center);
     @include customSize(28px,28px);
+    background-color: $bgC02;
     border: 1px solid $border;
     border-radius: 50%;
     &::after{
@@ -172,6 +176,7 @@ header{
     @include flexPos(center, center);
     @include customSize(28px,28px);
     border: 1px solid $border;
+    background-color: $bgC02;
     border-radius: 50%;
     &::after{
       content:'';
@@ -187,6 +192,7 @@ header{
 }
 
 .btn{
+  cursor: pointer;
   font-size:14px;
   display: inline-block;
   vertical-align:top;
@@ -215,7 +221,9 @@ header{
     @include customSize(80px, 98px);
     background-color: #fff;
     z-index: 10;
-
+    &.swiper-button-disabled{
+      display: none;
+    }
   }
   &__prev{
     @include flexPos(end, center);
